@@ -6,7 +6,7 @@
   "keywords": [],
   "author": "",
   "scripts": {
-    "dev": "NODE_ENV=development webpack-dev-server --config ./build/webpack.conf.dev --hot --progress --profile",
+    "dev": "NODE_ENV=development webpack-dev-server --config ./build/webpack.dev.conf --hot --progress --profile",
     "build": "NODE_ENV=production webpack --config ./build/webpack.prod.conf --progress"
   },
   "dependencies": {
