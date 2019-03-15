@@ -1,14 +1,14 @@
 import React from 'react'
 import './index.scss'
 
-class Error extends React.Component {
-  render() {
+class Home extends React.Component {
+  render () {
     return (
       <div>
-        错误页面
+        首页
       </div>
     )
   }
 }
 
-export default Error
+export default Home

@@ -3,7 +3,7 @@ import CONFIG from '../config'
 
 let timer = null
 
-function obj2search(obj) {
+function obj2search (obj) {
   obj = obj || {}
   let query = '?'
 
@@ -14,7 +14,7 @@ function obj2search(obj) {
   return query.slice(0, -1)
 }
 
-async function ajax(url, options) {
+async function ajax (url, options) {
   let opts = {
     method: 'GET',
     body: {},
