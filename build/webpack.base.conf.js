@@ -8,7 +8,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: 'index.js?[hash]',
+    filename: 'index.[chunkhash].js',
     publicPath: '/',
   },
   module: {
@@ -28,10 +28,17 @@ module.exports = {
           loader: 'url-loader',
           options: {
             limit: 1024,
-            name: 'img/[name].[ext]?[hash]',
+            name: 'img/[name].[hash].[ext]',
             fallback: 'file-loader'
           }
         }]
+      },
+      {
+        tets: /\.(woff|woff2|ttc|ttf|eot|otf)/,
+        loader: 'file-loader',
+        options: {
+          name: 'font/[name].[hash].[ext]'
+        }
       }
     ]
   },
