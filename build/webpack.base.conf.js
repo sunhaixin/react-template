@@ -34,7 +34,7 @@ module.exports = {
         }]
       },
       {
-        tets: /\.(woff|woff2|ttc|ttf|eot|otf)/,
+        test: /\.(woff|woff2|ttc|ttf|eot|otf)/,
         loader: 'file-loader',
         options: {
           name: 'font/[name].[hash].[ext]'
