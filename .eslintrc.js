@@ -5,9 +5,9 @@ module.exports = {
     'commonjs': true,
     'es6': true,
   },
-  'parser': 'babel-eslint',
   'extends': 'eslint:recommended',
   'parserOptions': {
+    'parser': 'babel-eslint',
     'ecmaFeatures': {
       'jsx': true
     },
