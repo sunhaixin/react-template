@@ -1,5 +1,5 @@
 import React from 'react'
-import Home from './Home'
+import { Home } from '@view/LazyComponent'
 
 class Index extends React.Component {
   render () {

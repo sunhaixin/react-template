@@ -1,8 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import Index from './view'
-import Error from './view/Error'
+import { Provider } from 'react-redux'
+import store from './store'
+import Index from '@view/index'
+import { Error } from '@view/LazyComponent'
 import 'babel-polyfill'
 
 class App extends React.Component {
@@ -21,8 +23,10 @@ if (module.hot) {
 }
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('app')
 )

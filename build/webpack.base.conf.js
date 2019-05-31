@@ -8,7 +8,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: 'index.[chunkhash].js',
+    filename: 'index.[hash].js',
     publicPath: '/',
   },
   module: {
@@ -65,10 +65,11 @@ module.exports = {
   resolve: {
     extensions: ['.js'],
     alias: {
+      '@src': path.resolve(__dirname, '../src'),
       '@static': path.resolve(__dirname, '../src/static'),
       '@request': path.resolve(__dirname, '../src/request'),
+      '@view': path.resolve(__dirname, '../src/view'),
       '@components': path.resolve(__dirname, '../src/view/components'),
-      '@src': path.resolve(__dirname, '../src'),
     }
   }
 }
